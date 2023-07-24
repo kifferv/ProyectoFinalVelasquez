@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Importamos y Vendemos todo tipo de repuestos y accesorios para tú vehiculo">
+    <meta name="keywords" content="CODERCAR, REPUESTOS, ACCESORIOS, AUTOMOTRICES, VEHICULOS">
+    <title>Codercar ofertas en repuestos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Urbanist:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/icons/ccwhiteicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="./js/repuestoSku.js"></script>
+    <script defer src="./js/index.js"></script>
+</head>
+<body>
+<nav class="navegador">
+    <div class="logo"><img src="./assets/img/codercarlogo1.png" alt="Logo Codercar"></div>
+        <ul>
+            <li><a href="./index.html">INICIO</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
+            <li><a href="./index.html">CATÁLOGO</a></li>
+            <li><a href="#carroCompras">CARRITO</a></li>
+        </ul>
+</nav>
+<header>
+    <div>
+        <h4>Ingresa tú nombre y hazte cliente de Codercar 😍</h4>
+    </div>
+    <div class="menu">
+        <button class="button-outline" title="Carrito de compras"><a href="#carroCompras"><img src="./assets/icons/carrito4.png" alt="Carrito"></a></button>
+    </div>
+    <div id="contenedorUsuario" hidden>
+        <p id="textoUsuario">Hola</p>
+    </div>
+    <div id="contenedorIdentificacion">
+        <form id="formularioIdentificacion">
+            <div class="row">
+                <div class="col-md-8">
+                    <div>
+                        <label class="form-label"></label>
+                        <input
+                        type="text"
+                        class="form-control"
+                        id="inputUsuario"
+                        required/>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary">
+                        Ingresa tú nombre 🚗
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</header>
+<main>
+    <div class="lista-productos">
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/filtropolen.jpg" alt="Filtro de Polen" width="250" height="250">
+            <p class="precio">Precio final: $7780</p>
+            <button class="agregar-carrito" data-id="1">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/filtroaceite.jpg" alt="Filtro de Aceite" width="250" height="250">
+            <p class="precio">Precio final: $8220</p>
+            <button class="agregar-carrito" data-id="2">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/filtrocombustible.jpg" alt="Filtro de Combustible" width="250" height="250">
+            <p class="precio">Precio final: $10210</p>
+            <button class="agregar-carrito" data-id="3">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/aceitetransmision.jpg" alt="Aceite de Transmisión" width="250" height="250">
+            <p class="precio">Precio final: $3225</p>
+            <button class="agregar-carrito" data-id="4">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/aceite1lt.jpg" alt="Aceite de Motor 1Lt" width="250" height="250">
+            <p class="precio">Precio final: $4265</p>
+            <button class="agregar-carrito" data-id="5">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/aceite2lt.jpg" alt="Aceite de Motor 2Lt" width="250" height="250">
+            <p class="precio">Precio final: $7240</p>
+            <button class="agregar-carrito" data-id="6">Comprar</button>
+        </div>
+        <div class="tarjeta-producto">
+            <h2></h2>
+            <img src="./assets/img/aceite5lt.jpg" alt="Aceite de Motor 5Lt" width="250" height="250">
+            <p class="precio">Precio final: $18250</p>
+            <button class="agregar-carrito" data-id="7">Comprar</button>
+        </div>
+    </div>
+<!--NOSOTROS-->
+    <div id="nosotros">
+        <div class="container-fluid">
+            <div class="row">
+                    <section class="section1 col-xs-12 p-5">
+                        <h2 class="section1__titulo animate__animated animate__zoomIn">¿QUIÉNES SOMOS?</h2>
+                        <p class="section1__parrafo animate__animated animate__zoomIn">Cordercar es una empresa exitosa del mercado en la distribución de repuestos para la marca Ford, atendiendo actualmente un porcentaje importante del mercado nacional. La compañía es representante autorizado de Ford Motor Chile, además de ser por excelencia importador y distribuidor de afamadas marcas como Chrysler, Dodge, Jeep, Hyundai, Kia, Toyota, Mazda, Suzuki, Mitsubishi y Honda. El objetivo de la compañía es poder dar una atención integral a todos sus clientes, por esto, se esmeran en mantener una importante variedad de stock para todos los modelos, y más aún para los más antiguos con valores al alcance de todos los bolsillos, con piezas originales, como también con piezas genuinas para el mercado de reposición, importadas de proveedores del mismo fabricante.</p>
+                    </section>
+                <div class="row text-center">
+                    <div class="col-xs-12 p-4">
+                        <iframe width="360" height="240" src="https://www.youtube-nocookie.com/embed/djV11Xbc914" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- CARRITO-->
+    <div class="carrito" id="carroCompras">
+        <img src="./assets/icons/carrito4.png" alt="">
+        <ul class="productos-carrito"></ul>
+        <p>Total: <span class="total-carrito">$0.00</span></p>
+        <button class="limpiar-carrito">Limpiar carrito</button>
+        <button class="finalizar_compra">Finalizar compra</button>
+    </div>
+</main>
+<br>
+
+<footer class="text-center text-white" style="background-color: #00a2ff;">
+
+    <div class="text-center p-3" style="background-color: #00a2ff(0, 0, 0, 0.2);">
+        ©Copyright, 2023 Todos los Derechos Reservados por CODERCAR.
+    </div>
+</footer>
+</section>
+</body>
+</html>
